@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="MoLin">
+  <meta name="Keywords" content="学习">
+  <meta name="Description" content="表单form">
+  <title>表单</title>
+ 
+ </head>
+<!--
+			表单：form【在标签最外层，双标签】
+				是一个包含表单的元素区域，表单元素是允许用户在表单中输入信息的元素
+			
+			form详解:
+				action【规定当提交表单时向何处发送表单数据】
+				method【规定用于发送数据的方法（get/post）】
+				name【名字，为了后台控制方便操作】
+				target【规定action属性中提交的页面在何处打开（_blank => 在新页面打开/_self => 在本页面打开）】
+
+			input框：
+				type规定input框的类型【checked（默认选中）】
+				 1）type="text" 文本框
+				 2）type="submit" 提交
+				 3）type="password" 密码框
+				 4）type="radio" 单选框（注意只有写了相同名字才能单独选择）
+				 5）type="checkbox" 复选框（单选框和复选框默认选中直接在标签里面添加checked,禁止选中的是disabled）
+					label
+					 a）为input元素定义标注，光标变成一个箭头
+					 b）可以单独写样式，通过for来连接input复选框的某一个id名
+				 6）type="reset" 重置
+				 7）type="button" 按钮
+				 8）type="image" 图片按钮 后面引入是src=""
+				 9）type="file" 文件上传
+				 10）type="hidden" 隐藏
+				 11）下拉选项框【默认选中selected】
+					<select>
+						<option value=""></option>
+					</select>
+-->
+ <body>
+	<form action="" method="" name="" target="">
+		用户名：<input type="text" name="username" value="请输入用户名"/></br>
+
+		密码：<input type="password" name="password" value="请输入密码"/></br>
+
+		<input type="radio" name="sex" value="women"/>女
+		<input type="radio" name="sex" value="man" checked/>男</br>
+
+		<input type="checkbox" name="" value="" disabled/>	LOL
+		<input type="checkbox" name="" value=""/>读书
+		<input type="checkbox" name="" value="" checked/>运动</label>
+		<input type="checkbox" name="" value="" id="buy"/>开车</br>
+
+		<label for="buy">
+			点我
+		</label></br>
+
+		<input type="reset" name="" value="重置"/>
+
+		<input type="submit"/>
+
+		<input type="button" name="" value="点我"></br>
+
+		<input type="image" name="" src="01.jpg"/></br>
+
+		<input type="file" name=""/>
+
+		<input type="hidden" name="" value=""/>
+		<hr/>
+
+		<select name="" id="">
+			<option value="beijing">北京</option>
+			<option value="shanghai" selected>上海</option>
+			<option value="guangzhou">广州</option>
+		</select>
+	</form>
+ </body>
+</html>

@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="MoLin">
+  <meta name="Keywords" content="学习">
+  <meta name="Description" content="文本域">
+  <title>文本域</title>
+ <style>
+	textarea{
+		resize:none;
+	}
+	fieldset{
+		width:500px;
+		text-align:center;
+	}
+ </style>
+ </head>
+ <!--
+			文本域：<textarea name="" id="" cols="30" rows="10"></textarea>
+			 1）cols属性定义宽度
+			 2）rows属性定义高度
+			属性：resize调整文本域的尺寸是都拖拽发生变化
+				属性值：
+				 none【不被拖拽】
+				 vertical【上下拉伸】
+				 horizontal【左右拉伸】
+
+			表单分组：
+				<fieldset>
+					<legend>分组名</legend>
+					<input type=""/>
+				</fieldset>
+ -->
+ <body>
+	<form action="form.php" method="get" name="" target="_blank">
+		<textarea name="" id="" cols="30" rows="10"></textarea>
+		<fieldset>
+		<legend>登录</legend>
+		姓名：<input type="text"/><br/>
+		密码：<input type="password"/>
+		</fieldset>
+	</form>
+ </body>
+</html>

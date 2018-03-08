@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="MoLin">
+  <meta name="Keywords" content="学习">
+  <meta name="Description" content="层级+透明属性+过渡属性">
+  <title>层级|透明属性|过渡属性</title>
+ <style >
+ body,ul,p{margin:0;padding:0;}
+ ul{text-style:none;}
+ li{
+	position:reative;
+	width:;
+	height:;
+	text-align:center;
+	font-size:;
+	margin:auto;
+	background-color:blue;
+
+ }
+ nav{
+	
+ }
+ li:hover .nav2{
+	display:block;
+ }
+ p{
+	width:200px;
+	height:50px;
+	background-color:red;
+ }
+ .content{
+	position:absolute;
+	width:300px;
+	height:300px;
+	background-color:green;
+ }
+ </style>
+ </head>
+ <!--
+			背景颜色只能在背景图片后面
+			ul>li($)*5?
+ -->
+
+ <!--
+			层级：z-index:;
+			 【默认是0】
+			 【只有在元素发生重合（脱离文档流{只能是定位的情况下}）的情况下才有层级】
+			 【数字越大，就越在上面/越小，就越在下面（负数也管用）】
+			
+			透明属性：opacity:;
+				取值范围是：0-1
+					0是完全透明，但是还会占据位置
+					1是完全不透明
+				
+			过渡属性：transition:;
+					属性值就是时间，多少秒，这个动画执行多长时间
+					【注意：display不支持过渡属性】
+ -->
+ <body>
+	<ul>
+		<li class="li1" style="background-color:red;">
+			导航	
+			<div class="nav2">
+				<p></p>
+				<p></p>
+				<p></p>
+				<p></p>
+				<p></p>
+			</div>
+		</li>
+	</ul>
+	<div class="content">content</div>
+ </body>
+</html>

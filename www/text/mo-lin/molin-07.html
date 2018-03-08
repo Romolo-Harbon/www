@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>06-第六章  高级选择器 伪类</title>
+<meta charset='utf-8'>
+<link href='https://dn-maxiang.qbox.me/res-min/themes/marxico.css' rel='stylesheet'>
+<style>
+	.note-content{
+		font-family: 'Helvetica Neue', Arial, 'Hiragino Sans GB', STHeiti, 'Microsoft YaHei', 'WenQuanYi Micro Hei', SimSun, Song, sans-serif;
+	}
+</style>
+</head>
+<body>
+<div id='preview-contents' class='note-content'>
+<h1 id="06-第六章-高级选择器-伪类">06-第六章  高级选择器 伪类</h1>
+<p></p>
+<h2 id="一选择器">一、选择器</h2>
+
+<p>一  基本选择器</p>
+
+<blockquote>
+  <p><code>*</code>    ——————–(通用元素选择器)匹配任何元素 <br>
+  <code>tagName</code>———–(标签|元素选择器)匹配所有标签名是tagName的元素 <br>
+  <code>.className</code>——(class选择器)-匹配所有class属性中包含className的元素 <br>
+  <code>#IDName</code>———–(id选择器) 匹配id属性等于IDName的元素 </p>
+</blockquote>
+
+<p>二、多元素的组合选择器</p>
+
+<blockquote>
+  <p><code>E,F</code>      (多元素选择器)    同时匹配所有E元素或F元素，E和F之间用逗号分隔 <br>
+  <code>E F</code>       (后代选择器) 匹配所有属于E元素后代的F元素，E和F之间用空格分隔-包含子元素和孙元素 <br>
+  <code>E &gt; F</code> (子元素选择器)        匹配所有E元素的子元素F <br>
+  <code>E + F</code> (毗邻元素选择器)   匹配紧随E元素之后的同级（兄弟）元素F（只有一个）</p>
+</blockquote>
+
+<p>三、属性选择器</p>
+
+<blockquote>
+  <p><code>[att]</code>        匹配所有具有att属性的元素 <br>
+  <code>[att=val]</code>     匹配所有att属性等于“val”的元素  <br>
+  <code>[att~=val]</code>   匹配所有att属性包含“val”或者等于“val”的元素(val必须是一个完整词) <br>
+  <code>[att|=val]</code>   匹配所有att属性以val-’ 开头的(可以有多个值) 或等于“val”的元素（比如说zh-cn） <br>
+  <code>[att1][att2=val]</code>  匹配所有拥有att1属性同时具有att2等于’val’的元素</p>
+</blockquote>
+
+<p>四、伪类选择器</p>
+
+<blockquote>
+  <p><code>:link</code>        匹配所有未被点击的链接 <br>
+      <code>:visited</code>      匹配所有已被点击的链接 <br>
+      <code>:hover</code>   匹配鼠标悬停其上的E元素 <br>
+      <code>:active</code>   匹配鼠标已经其上按下、还没有释放鼠标的E元素</p>
+</blockquote>
+
+<p>五、 伪元素选择器，要结合content</p>
+
+<blockquote>
+  <p><code>:before</code>      在E元素内容前面插入内容 <br>
+      <code>:after</code>        在E元素内容后面插入内容</p>
+</blockquote>
+
+
+
+<h2 id="二hover拓展">二、hover拓展</h2>
+
+<blockquote>
+  <p><code>element:hover{ }</code>     滑入到element元素的时候————这是改变元素自生 <br>
+  <code>element:hover chirldren{ }</code>    滑入到element元素的时候，他的后代chirldren改变——这是改变元素下面的子元素</p>
+</blockquote></div></body></html>

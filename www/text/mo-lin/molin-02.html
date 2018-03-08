@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="墨林津枫">
+  <meta name="Keywords" content="学习">
+  <meta name="Description" content="01笔记">
+  <title>标签的实验</title>
+  <style type="text/css">
+	#text-01,.text-02,.span-text
+	{
+		color:#f30;
+	}
+  </style>
+  <!--
+			选择器种类：
+				1)标签选择器:
+					p{}
+					li{}
+				2)类选择器:
+					.text{}
+				3)ID选择器:
+					#text{}
+				4)复合选择器:
+					li.text{}
+					li#test
+				5)嵌套选择器:
+					p span{}
+					p span#text{}
+				6)集体申明:
+					p,p span#text{}
+	-->
+ </head>
+	<!--
+			1.什么是HTML？
+				Hypertext markup language(超文本标记语言)
+			2.html css javascript?
+				html(肢体)
+				css:样式表(修饰美化网页)
+				javascript：脚本语言（行为-增加动态交互功能）(难点)
+	-->
+
+	<!--
+			常用标签：
+			a)双标签：
+				1)div块
+				2)h1,h2,h3,h4,h5,h6标题标签（默认字体从大到小的变化）（语义化的标签【作用：优化】）
+					【注意：h1标签最多只能出现一次！！】
+				3)p段落标签（文字段落）
+				4)span标签（修饰文字:在一大段文字中区分样式）
+				5)ul标签（无序列表标签）>li(列表项标签)
+				  ol标签（有序列表标签）>li(列表项标签)
+				  dl标签（定义列表）>dt（定义列表标题）>dd(定义列表项)
+					【ul和ol下面只能有li】
+					【dl下只能有dt,然后dd里面的是对dt里面的做定义】
+				6)i标签（定义斜体文字）
+					【em标签比i标签更具有强调作用】
+				7)em标签（具有强调作用：让搜索引擎更好的找到他）
+				8)strong标签（具有强调作用：加粗）
+				9)<a herf=""></a>超链接标签（引入跳转链接）
+			b)单标签：
+			【现在可以不用加'/'】
+				1)<img src="">图片标签（引入图片）
+				2)<input>定义文本框标签（定义文本框）
+				3)<br>标签（换行标签）
+				【只换行，不空格】
+				4)<hr>标签（定义水平线标签）			
+	-->
+
+	<!--
+			img图片标签【四要素：src alt width height】
+				<img src="" alt="" width="" height="">
+					src（图片引入路径）
+					alt（图片无法加载时的替换文本）
+					width（宽度）
+					height（高度）
+					【这里的宽度和高度是为了让搜索引擎找到抓取，不需要写单位】
+					title(图片的标题：鼠标放在图片上显示的文字)
+					【没图片的时候也看得见title】
+	-->
+
+	<!--
+			a标签
+				<a href="" target="">超链接名称</a>
+					herf="url"
+					url:链接地址
+					target:链接打开的方式
+						_blank target="_blank"（打开方式：在新窗口打开）
+						_self target="_self"（打开方式：在当前窗口打开）
+
+					锚链接：（点击去到我们想要的位置）
+						<a href:"#name"></a>
+						text-01和text-02是对象id的名字，随便取的.
+
+					锚链接对象：
+						1.只能是超链接a标签可以使用<a name="text"></a>
+						2.任何标签可以使用<a id="text"></a>,包括超链接a标签
+						3.id命名只能用一次
+	-->
+ <body>
+	<div>
+		<ul>	<!--h1~h6的用法-->
+			<h1>01笔记</h1>
+			<h2>JiaMing</h2>
+			<h3>HeiTu</h3>
+			<h4>MoLin</h4>
+			<h5></h5>
+			<h6></h6>
+		</ul>
+		<ul>	<!--<span>标签的用法-->
+			<li>前端<span class="span-text">这里是span标签的测试</span>真有趣</li>	<br>
+		</ul>
+		<ul>	<!--<ul>标签的用法-->
+			<li>233</li>
+			<li>666</li>
+		</ul>
+		<ol>	<!--<ol>标签的用法-->
+			<li>233</li>
+			<li>666</li>
+		</ol>
+		<dl>	<!--<dl><dt><dd>标签的用法-->
+			<dt>MoLin</dt>
+			<dd>正在学前端</dd>
+			<dd>正在学Python</dd>
+		</dl>
+		<ul>	<!--<i><em><strong><img><input>标签的用法-->
+			<i>MoLin</i>	<br>
+			<em>MoLin更加强调</em>	<br>
+			<strong>MoLin</strong>	<br>
+			<img src="">	<br>
+			<input>	<br>
+			<a href="https://www.baidu.com">百度</a>
+		</ul>
+		<ul>	<!--<img>标签的四要素；img中的宽高和style中的宽高有不同作用-->
+			<img src="images/pic-molin/road.jpg" alt="公路" width="500" height="500" title="风景照"
+			style=""width:200px;height:200px;>
+		</ul>
+		<ul>	<!--<a>标签的具体用法；锚链接-->
+			<a href="https://www.baidu.com" target="_blank">baidu-text-01</a>	<br>
+			<a href="https://www.baidu.com" target="_self">baidu-text-02</a>	<br>
+			<a href="">锚链接text-03</a>
+			<p>以下是锚链接的测试</p>
+			<a href="#text-01">Teacher.Wan</a>
+			<a href="#text-02">Teacher.Yin</a>
+			<a href="#text-03">Teacher.Zhao</a>
+			<p>MoLin</p>
+			<p>MoLin</p>
+			<p>MoLin</p>
+			<p>MoLin</p>
+			<p>MoLin</p>
+			<p>MoLin</p>
+			<p>MoLin</p>
+			<p>MoLin</p>
+			<p>MoLin</p>
+			<p>MoLin</p>
+			<p>MoLin</p>
+			<p>MoLin</p>
+			<p>MoLin</p>
+			<p>MoLin</p>
+			<p>MoLin</p>
+			<p>MoLin</p>
+			<p>MoLin</p>
+			<p>MoLin</p>
+			<p>MoLin</p>
+			<p>MoLin</p>
+			<p>MoLin</p>
+			<p>MoLin</p>
+			<p>MoLin</p>
+			<p>MoLin</p>
+			<p>MoLin</p>
+			<p>MoLin</p>
+			<p>MoLin</p>
+			<p id="text-01">Teacher-Wan</p>
+			<!--【id:给P标签取了一个名字】【要实现锚链接只能用id命名,不能用class命名】【id可以命名任何标签】-->
+			<p>MoLin</p>
+			<p>MoLin</p>
+			<p>MoLin</p>
+			<p>MoLin</p>
+			<p>MoLin</p>
+			<p>MoLin</p>
+			<p>MoLin</p>
+			<p class="text-02">Teacher-Yin</p>
+			<!--【使用class命名，失效】-->
+			<p>MoLin</p>
+			<p>MoLin</p>
+			<p>MoLin</p>
+			<p>MoLin</p>
+			<p>MoLin</p>
+			<p>MoLin</p>
+			<p>MoLin</p>
+			<p>MoLin</p>
+			<p>MoLin</p>
+			<p>MoLin</p>
+			<p>MoLin</p>
+			<p>MoLin</p>
+			<p name="text-03" style="color:#f30;">Teacher-Zhao</p>
+			<!--【只有在a标签中使用name命名才有效，这里失效】-->
+			<p>MoLin</p>
+			<p>MoLin</p>
+			<p>MoLin</p>
+			<p>MoLin</p>
+			<p>MoLin</p>
+			<p>MoLin</p>
+			<p>MoLin</p>
+			<p>MoLin</p>
+			<p>MoLin</p>
+			<p>MoLin</p>
+			<p>MoLin</p>
+		</ul>
+	</div>
+ </body>
+</html>

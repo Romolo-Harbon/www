@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="MoLin">
+  <meta name="Keywords" content="学习">
+  <meta name="Description" content="命名规则+背景样式">
+  <title>html命名规则|css背景样式</title>
+ <style>
+	body{margin:0;padding:0;}
+/*CSS背景样式text*/
+	.content{
+		width:100%;
+		height:2000px;
+	}
+	.pic{
+		width:500px;
+		height:500px;
+		margin:auto;
+		border:1px solid red;
+		/*background-color:skyblue;*/
+		/*background-color:rgb();*/
+		/*background-color:rgba();*/
+
+		/*background-image:url(02.jpg);*/
+		/*background-repeat:no-repeat;*/
+		/*background-repeat:repeat-x;*/
+		/*background-repeat:repeat-y;*/
+
+		/*background-position:center;*/
+		/*background-position:100%/*图的100%处和边框的100%处重合 0%/*图的0%处和边框的0%处;*/
+
+		/*background-size:cover;*/
+		/*background-size:contain;*/
+		/*background-size:50px 100px;*/
+		/*background-size:100%;*/
+		
+		/*background-attachment:fixed;*/
+
+		background:pink url(02.jpg) no-repeat 0/100%;
+	}
+ </style>
+ </head>
+ <!--
+		HTML命名规范
+			1.禁止命名方法
+			 1）汉字
+			 2）拼音
+			 3）纯数字
+			 4）特殊符号
+			 5）a,b,c等单字符
+			 6）驼峰式命名（中间高两边低：topNav等）
+
+			2.企业命名规范
+			 1）英文开头
+			 2）可以包含数字
+			 3）-号连接
+
+ -->
+
+ <!--
+		CSS背景样式：
+			1.背景颜色 background-color:;
+			 1）英文单词
+			 2）十六进制
+			 3）rgb->red green blue（取值范围是0-255）
+				【background-color:rgb(0-255,0-255,0-255);】
+				【中间用逗号隔开】
+			 4）rgba->red green blue opacity(透明度)
+				【background-color：rgba(0-255,0-255,0-255,0-1)】
+				【opacity=>0 代表完全透明
+				opacity=>1 代表完全不透明
+				若取值0-1之间，则省略0.n前的0，直接写.n】
+			
+			2.背景图片【background-image:;】
+			 1）属性值：url('图片路径')
+				【只能是英文命名的图片】
+
+			3.背景图片平铺【background-repeat:;】
+			 1）repeat(平铺)【是默认值】
+			 2）no-repeat(不平铺)
+			 3）repeat-x水平方向平铺
+			 4）repeat-y竖直方向平铺
+
+			4.背景图片的位置【background-position:;】
+			 1）关键词：top right bottom left center(居中)
+			 2）位置属性值：
+					a）一个值的时候，另一个默认居中（上居中，右居中，下居中，左居中）
+					b)两个值得时候，第一个先执行，第二个后执行
+			 3）属性值是数字
+					a）像素px写法
+					b）百分号%写法
+						【x% x%第一个%代表x轴的占比多少第二个%是代表y轴占比多少】
+						【0%到100%是从左到右，从上到下，左上是0% 0%,右下是100% 100%】
+
+			5.调整背景图片大小【background-size:;】
+					a）cover【图片左边和上边和边框重合时，cover使图片等比缩放直到图片下边和边框重合（直到图片填充完背景框停止缩放）】
+					b）contain【图片左边和上边和边框重合时，contain使图片等比缩放到图片右边和边框重合（可能不能填充满北京边框）】
+					c）数值 ：【npx npx】
+						1）第一个值代表x轴，第二个代表y轴
+						2）只写一个值时，第二个值就默认为auto
+					d）百分数：【n% n%】
+						背景框宽高的n%
+			
+			6.背景图片的关联【background-attachment:；】
+				属性值
+					1）scroll【默认值，图片会随着背景框的移动而移动】
+					2）fixed【图片不会随着背景的移动而移动】
+					3）inherit【继承父级的背景属性样式】
+
+			7.背景样式的复合写法【background:color url() repeat position size attachment】
+				【复合样式个数没超过三个就全部单独写】
+ -->
+ <body>
+	<div class="content">
+		<div class="pic"></div>
+	</div>
+ </body>
+</html>

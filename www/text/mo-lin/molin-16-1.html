@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="MoLin">
+  <meta name="Keywords" content="学习">
+  <meta name="Description" content="框架frameset">
+  <title>框架frameset</title>
+ 
+ </head>
+ <!--
+			1.框架结构标签	frameset
+			 【注意：不能和body一起使用】
+				关键词：
+					1）水平框架rows="x%,y%"
+					 【可视区域的百分比，上区域为x%,下区域为y%】
+					2）垂直框架cols="x%,y%"
+		
+
+			2.框架标签		frame
+			 【代替body中的div标签】
+				关键词：
+					noresize 可以让框架不被拉伸
+ -->
+ <frameset rows="25%,75%">
+	<frame src=""/>
+	<frameset cols="50%,50%">
+		<frame src=""/noresize="noresize">
+		<frame src=""/>
+	</frameset>
+ </frameset>
+</html>

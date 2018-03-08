@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="MoLin">
+  <meta name="Keywords" content="学习">
+  <meta name="Description" content="浮动+清除浮动">
+  <title>浮动|清除浮动</title>
+ <style>
+	body{margin:0;padding:0;}
+	.line{
+		width:500px;
+		height:300px;
+		margin:auto;
+		border:3px solid red; 
+	}
+	.float{
+		float:left;
+		width:100px;
+		height:100px;
+	}
+	/*.float1{
+		float:none;
+	}
+	.float2{
+		float:none;
+		width:150px;
+		height:100px;
+	}
+	.float3{
+		float:left;
+		width:170px;
+		height:100px;
+	}*/
+ </style>
+ </head>
+ <!--
+			浮动：float:;
+				浮动的定义：使元素脱离文档流，按照指定方向（左右）方向发生移动，遇到父级边界，或者相邻浮动元素，元素就停下来
+				文档流：是文档中可实现的对象排列是所占的位置
+ -->
+
+ <!--
+			浮动的一般情况：
+				1.左右浮动，遇到父级边界就停下
+				2.左右浮动，遇到相邻的浮动元素就停下来（浮动不能占据别人的空间，但是别人可以占据他脱离文档流的部分）
+				3.如果父级宽度不够，浮动元素就会往下掉
+				4.浮动元素在往下掉的时候，在往前面排列时，遇到比正常元素高的，就会被挡住（沿着相邻浮动元素的边框走）
+
+			 【注意：浮动不是完全脱离文档流】
+				文字，img，input都不会占据浮动元素的位置，只有背景才会去占据浮动元素位置
+ -->
+
+ <!--
+			浮动清除：
+			 【注意：使用了浮动，就要清除】
+				1.给父级元素定义宽高
+					 优点：简单，代码少，容易掌控
+					 缺点：只适合固定的宽高，而且宽高必须精确，如果父级高度和浮动元素高度不同，就会产生问题，对响应式布局有很大影响，响应式的宽高是不固定的
+				2.在浮动元素的父级之后放一个空标签，写入 clear:both; 就是清除浮动
+					 优点：简单，代码少，浏览器支持性好，不容易出现怪异问题
+					 缺点：缺点：初学者不太好理解，浮动元素太多，空标签的数量就会增加
+
+				3.直接给浮动元素的父级后面的毗邻元素给
+					clear:left; ->上面是左浮动
+					clear:right; ->上面是右浮动
+					clear:both; ->同时清除左右浮动
+					 
+					 优点：简单，代码少，浏览器支持性好，不容易出现怪异问题
+					 缺点：初学者不太好理解，浮动元素太多，内联元素不能使用
+
+				4.给左浮动元素的父级定义一个：after伪元素
+				 使用方法：给浮动元素添加一个类名clearfix
+					.clearfix:after{content:'';display:block;clear:both;}【必须掌握】
+				
+				5.给浮动元素父级添加overflow:hidden;
+					 缺点：不能喝position一起使用，超出部分真的就隐藏了
+ -->
+ <body>
+	<div class="line">
+		<div class="float float1" style="background-color:red;">1</div>
+		<div class="float float2" style="background-color:blue;">2</div>
+		<div class="float float3" style="background-color:green;">3</div>
+		<div class="float float4" style="background-color:pink;">4</div>
+	</div>
+ </body>
+</html>
+

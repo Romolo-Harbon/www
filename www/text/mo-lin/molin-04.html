@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="MoLin">
+  <meta name="Keywords" content="学习">
+  <meta name="Description" content="课后作业">
+  <title>超简单的导航栏</title>
+ <style type="text/css">
+	body,div,ul,li,a,p,img{margin:0;padding:0;}
+	a{text-decoration:none;}
+	body{
+		background-color:#d2d9d7;
+	}
+	#container{
+		width:650px;
+		margin:15px auto;
+		background-color:white;
+	}
+	.nav{
+		margin:auto;
+		padding:5px;
+		background-color:#b6b6be;
+	}
+	.nav li{
+		display:inline-block;
+		margin:auto 25px;
+	}
+	.content{
+		width:650px;
+		margin:15px auto;
+		padding:auto;
+		background-color:#eff1f1;
+	}
+	.content img{
+		display:block;
+		margin:15px 10px;
+		padding:15px;
+	}
+	.content p{
+		display:block;
+		margin:5px 25px;
+		padding:5px;
+		font-size:20px;
+	}
+	.content a{
+		color:#595a50;
+	}
+ </style>
+ </head>
+  <!--
+		初始选择器
+			1）ID选择器【名称随便取，但取过的名字只能出现一次，就像身份证号码】【使用方法：#id名称{}】
+			2）class类名选择器【名字随便取，取过的名字还可以继续用class取】【使用方法：.class名称{}】
+			3）标签选择器【使用方法：标签{}】
+ -->
+
+ <!--
+		样式方法
+			1）行内样式
+				【在起始标签以style="属性:属性值;属性:属性值.."开始】
+				【每一个样式以分号结尾！！】
+			2）内部样式
+				【在<head></head>标签里写入<style></style>标签】
+			【Q：如果同时出现id:"content"和class="content",用内部样式更变样式两者，会变成什么样子？】
+			3）外部样式
+ -->
+
+ <!--
+		样式初始化（不一定只是初始化浏览器默认样式）
+			a）样式
+				【就是我们所说的CSS样式】
+			b）初始化
+				【让所有样式归为0的状态】
+			c）样式初始化
+				【让所有样式归于0的状态，也就是不具备状态】
+			【注意：在使用的时候，具有默认属性的标签才清除，需要的才去样式初始化】
+			d）通配符*
+				【*{margin:0;padding:0;}】【所有的意思，但是不准使用！！！加载的时候会影响到加载速度】
+ -->
+
+ <!--
+		元素类型（标签类型）
+		 块级元素：div.../内联元素:span...（行内元素）
+			1.块级元素
+			 特性：
+				a）支持宽高width/height
+				b）独处一行
+				c）默认和父级宽度一样
+				d）支持内边距padding,也支持外边距margin
+				e）能包裹所有元素（标签），但是有例外
+					【注意：p标签不能包裹块级元素（标签）】
+				f）常见块级元素：
+					div/h1-h6/p/ul/ol/dl...
+
+			2.内联元素
+			 特性：
+				a）不支持宽高width/height
+				b）和其他内联元素同处一行
+				c）支持内边距padding，但是上下内边距无视块级元素,左右支持
+				d）【注意】支出外边距margin，但是不支持margin:auto;
+				e）【注意】不能包裹块级元素（标签），但是有例外
+					【注意：a标签能包裹块级元素（标签）】
+				f）标签间的间隔被解析
+				g）常见的内联元素：
+					a/span/i/em/label/img/input
+				h）【注意：img/input支持部分块级元素特性】
+					1）宽高
+					2）内外边距
+
+			3.行内块级元素
+			 特性：
+				a）横排显示
+				b）支持宽高
+				c）标签间断被解析成空格（就是换行enter键被解析d）支持内边距，支持外边距，但是不支持居中atuo属性
+ -->
+
+ <!--
+		元素类型转换：【display:inline/block;】
+		 【注意：更变display后，包裹性仍不改变】
+			1）块->内联 属性值：inline
+				【注意：该元素不再具有块元素特性，而具有了内联元素特性】
+				【注意：改变后仍可以包裹块元素】
+
+			2）内联->块 属性值：block
+				【注意：该元素不再具有内联元素特性，而具有了块元素特性】
+				【注意：改变后仍不可包裹块元素】
+
+			3）块/内联->行内块 属性值：inline-block
+
+		解决标签有间隙的问题：
+			1）不换行
+				<ul>
+					<li></li><li><li>
+				</ul>
+			2）注释
+			3）把enter换行放到结束标签里
+				<ul>
+					<li><
+					/li>
+				</ul>
+			4）在body里面设置font-size:0使字体宽度为0,但是会导致所有字体粗细全为零
+
+		元素隐藏 属性值：none
+			【注意：块元素具有显示之意】
+	【Q：width:100%是什么？】
+			
+ -->
+
+ <!--
+		垂直外边距合并：
+		 【当两个（垂直外边距）相遇时，他们会形成一个外边距，这就是垂直外边距和并】
+			1.父子级发生合并
+			 【当一个元素包含另一个元素中时，他们的上下外边距发生合并】【自动选择合并后的外边距为最大的那一个】
+			2.两个同级元素发生合并
+			 【当一个元素出现在另一个元素的上面，第一个元素的下外边距和第二个元素的上外边距发生合并】【合并后外边距为最大的那一个】
+		
+		解决外边距合并影响：
+			1.解决父子级外边距合并
+			 1）用父级的外边距代替子集得到外边距
+					.content{
+						width:500px;
+						height:450px;/*超出了就要减少50px*/
+						margin:auto;
+						margin-top:100px;
+						padding-top:50px;
+						background-color:#c09;
+					}
+					.warp{
+						width:50px;
+						height:50px;
+						margin-left:50px;
+						background-color:blue;
+					}
+			 2）给父级加边框
+					.content{
+						width:200px;
+						height:200px;
+						margin:auto;
+						margin-top:100px;
+						/*padding-top:50px;*/
+						border:1px solid red;
+						background-color:#c09;
+					}
+					.warp{
+						width:50px;
+						height:50px;
+						margin-left:50px;
+						margin-top:50px;
+						background-color:blue;
+					}
+			 3）给父级加一个overflow:hidden(超出隐藏可以解决外边距合并)
+					.content{
+						width:200px;
+						height:200px;
+						margin:auto;
+						margin-top:100px;
+						/*padding-top:50px;*/
+						/*border:1px solid red;*/
+						overflow:hidden;（超出隐藏）
+						background-color:#c09;
+					}
+					.warp{
+						width:50px;
+						height:50px;
+						margin-left:50px;
+						margin-top:50px;
+						background-color:blue;
+					}
+			2.两个同级元素发生合并
+			 1）定位：绝对定位
+			 2）给某一个元素单独设置inline-block
+-->
+ <body>
+	<div id="container">
+		<ul class="nav">
+			<li>烘焙</li>
+			<li>美食</li>
+			<li>休闲</li>
+		</ul>
+	</div>
+	<div class="content">
+		<img src="images/food.png" alt="food" width="600" height="400">	
+		<p><a href="#" title="">烘焙|这里聚集了很多烘焙的店 欢迎前来品尝</a></p>
+		<p><a href="#" title="">美食|藤椒红油烫出的火辣成都味 橘洲美妙空间</a></p>
+		<p><a href="#" title="">休闲|冲上云霄品世界各地美酒 吃吃喝喝</a></p>
+	</div>
+ </body>
+</html>

@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>C语言的输入输出</title>
+</head>
+
+<body>
+	<h1>什么是程序?</h1>
+	程序（program）是为实现特定目标或解决特定问题而用计算机语言编写的命令序列的集合。
+	<br>
+	<br>
+	C语言:
+	<br>
+	<br>
+    <li>基本的输入输出函数</li>
+	<br>
+    输入函数：
+    scanf	在VS2017中修改为scanf_s，也可以将检测关闭。
+	<br>
+    输出函数：
+    printf
+    <br>
+	<br>
+	<font color="#00FF7F">//Hello World.c</font>
+	<br>
+	<font color="#C0C0C0">#include</font>
+	<font color="#B5A642">&lt;stdio.h&gt;</font>
+	<br>
+	<font color="#0000FF">int</font>
+	main 
+	<font color="#C0C0C0">(</font>
+	<font color="#0000FF">void</font>
+	<font color="#C0C0C0">)</font>
+	<br>
+	<font color="#C0C0C0">{</font>
+	<br>
+	&nbsp; &nbsp; &nbsp;printf
+	<font color="#C0C0C0">(</font>
+	<font color="#B5A642">&quot;Hello World.\n&quot;</font>
+	<font color="#C0C0C0">)</font>
+	;
+	<br>
+	<font color="#0000FF">&nbsp; &nbsp; &nbsp;return&nbsp;</font>
+	0;
+	<br>
+	<font color="#C0C0C0">}</font>
+	<br>
+	<br>
+	运行结果：
+	<br>
+	<img src="images/helloworld.jpg" width="500" height="250" alt="Hello World" />
+	<br>
+	<br>
+	#include&lt;stdio.h&gt;是在程序编译之前要处理的内容，称为编译预处理命令。编译预处理命令还有很多，它们都以“#”开头，并且不用分号结尾。
+	<br>
+	<br>
+	在使用标准函数库中的输入输出函数时，编程系统要求程序提供有关的信息（例如对这些输入输出函数的声明），
+	<br>
+	#include&lt;stdio.h&gt;的作用就是用来提供这些信息的，stdio.h是C编译系统提供的一个文件名，stdio是“standard input &amp; output”的缩写，即有关标准输入输出的信息。
+	<br>
+	<br>
+	在程序中用到系统提供的标准函数库中的输入输出函数时，应在程序的开头写上一行：#include"stdio.h"或者是#include&lt;stdio.h&gt;,这样才能调用库函数。
+	<br>
+	二者主要在于查找效率上有差别，#include&lt;stdio.h&gt;一般用包含系统文件，它是查找先从系统目录查找开始查找；#include "stdio.h"一般用包含项目文件，它是查找先从项目目录查找开始查找。
+	<br>
+	<br>
+	在编写C语言中，常用到printf()和scanf()函数，他们就是stdio.h中的两个标准输入输出函数，所以编程语句中如果要用到此两个函数就一定要在头文件中加入#include&lt;stdio.h&gt;。
+	<br>
+	<br>
+	前面说过了printf可以使括号中的引号里的字符进行打印，所以:
+	<br>
+    printf("Hello World!\n");
+	<br>
+    就打印出了Hello World!\n
+	<br>
+	<br>
+	<font color="#00FF7F">//Sum.c</font>
+	<br>
+	<font color="#C0C0C0">#include</font>
+	<font color="#B5A642">&lt;stdio.h&gt;</font>
+	<br>
+	<font color="#0000FF">int</font>
+	main 
+	<font color="#C0C0C0">(</font>
+	<font color="#0000FF">void</font>
+	<font color="#C0C0C0">)</font>
+	<br>
+	<font color="#C0C0C0">{</font>
+	<br>
+	<font color="#0000FF">&nbsp; &nbsp; &nbsp;int</font>
+	a,b;
+	<br>
+	&nbsp; &nbsp; &nbsp;scanf
+	<font color="#C0C0C0">(</font>
+	<font color="#B5A642">"%d %d",&amp;a,&amp;b</font>
+	<font color="#C0C0C0">)</font>
+	;
+	<br>
+	&nbsp; &nbsp; &nbsp;printf
+	<font color="#C0C0C0">(</font>
+	<font color="#B5A642">"%d",a+b</font>
+	<font color="#C0C0C0">)</font>
+	;
+	<br>
+	<font color="#0000FF">&nbsp; &nbsp; &nbsp;return&nbsp;</font>
+	0;
+	<br>
+	<font color="#C0C0C0">}</font>
+	<br>
+	<br>
+	这个程序主要功能是让两个整数进行相加。
+	<br>
+	<br>
+    scanf函数的模样大致就如上，输入时要按照对应的格式，不然会得到意料之外的结果。
+	<br>
+	<br>
+    %d代表的是整型的数据，根据不同的数据要选择相对应的符号。相对应的%d按顺序对应后面的变量。
+	<br>
+	<br>
+    &amp;是取地址符，scanf中，变量是要带上&amp;符号的，除非里面的原本就是地址。
+    <br>
+    <p><small>Tips：\n是转义字符，表示换行的意思。</small></p>
+</body>
+</html>

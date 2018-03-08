@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="MoLin">
+  <meta name="Keywords" content="学习">
+  <meta name="Description" content="内联框架iframe">
+  <title>内联框架iframe</title>
+ <style type="text/css">
+	body{margin:0;padding:0;}
+	div{	
+		width:800px;
+		height:500px;
+		margin:50px auto;
+	}
+	iframe{
+		width:800px;
+		height:500px;
+		border:5px solid red;
+	}
+ </style>
+ </head>
+ <!--
+			内联框架iframe
+			 width和height属性规定宽高
+			 src是引入一个html文档的地址连接
+			 frameborder="1" 有边框
+			 frameborder="0" 无边框
+			 scrolling="" 规定滚动条
+				a)yes 默认就有
+				b)no 无
+				c)auto 根据内容来产生
+
+			iframe作为链接目标
+				iframe作为链接的目标target，链接target属性必须引用iframe的name属性
+ -->
+ <body>
+	<div>
+		<iframe src="https://www.taobao.com/" width="500" height="500" frameborder="1" scrolling="no" name="iframe-a"></iframe>
+	</div>
+	<p>
+		<a href="#" target="iframe-a">
+	</p>
+	<p>
+		<a href="#" target="iframe-a">
+	</p>
+	<p>
+		<a href="#" target="iframe-a">
+	</p>
+ </body>
+</html>

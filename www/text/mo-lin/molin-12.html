@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="MoLin">
+  <meta name="Keywords" content="学习">
+  <meta name="Description" content="垂直居中+指针/透明">
+  <title>垂直居中|指针|透明</title>
+ <style>
+	body,p{margin:0;padding:0;}
+	p{
+		display:inline-block;
+		width:10px;
+		height:10px;
+		background-color:red;
+		padding-left:50px;
+		padding-right:50px;
+		line-height:50px;
+		font-size:30px;
+	}
+	.p1{
+		vertical-align:top;
+	}
+	.p2{
+		vertical-align:text-top;
+	}
+ </style>
+ </head>
+ <!--
+			垂直对齐方式：vertical-align
+				属性值：
+				 1）基线baseline
+					【是默认的垂直对齐方式，在x英文字体的底部（x只是一个参考）】
+				 2）top
+					【top的元素的顶端与行中最好元素的顶端对齐（这个元素的顶端会受到行高的影响）】
+				 3）text-top
+					【text-top元素的顶端和字体的顶部对齐（字体的顶部是字体后面的背景，选中文字后就可以看见的那个背景）】
+				 4）bottom
+					【bottom元素的底端与行中最低元素的底端对齐（这个元素的底端会受到行高的影响）】
+				 5）text-bottom
+					【text-bottom元素的底端和字体的底部对齐（字体的底部是字体后面的背景，选中文字后就可以看见的那个背景）】
+				 6）middle
+					【middle元素的中部对齐，如果有多个元素，都得写middle，是元素高的中部，不是文字的中部】
+					【注意：想要横排所有元素都垂直居中，都得加vertical-align:middle;如果有文字需要垂直居中，千万不能给文字元素添加高度】
+				 7）super/sup
+			
+ -->
+
+ <!--
+			指针：cursor
+				1）pointer小手
+				2）move表示某一个对象可以移动
+				3）text光标指示文本
+				4）help帮助
+				5）wait等待
+			
+			光标的引入：
+				cursor:url(""),pointer;【必须这样写】
+
+			透明度：
+			 IE8以上和其他主流浏览器 =>opacity
+			 TE8及以下
+ -->
+ <body>
+	<div class="wrap">
+		<img src="" alt="">
+		<p>MoLinjsjiad感觉到了什么</p>
+	</div>
+ </body>
+</html>

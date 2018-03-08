@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="MoLin">
+  <meta name="Keywords" content="学习">
+  <meta name="Description" content="相对定位和绝对定位+父相子绝和固定定位/最大宽度最小宽度">
+  <title>相对定位|绝对定位|父相子绝|固定定位|最大宽度|最小宽度</title>
+ <style>
+	body,ul{margin:0;padding:0;}
+	.wrap{
+		width:500px;
+		height:600px;
+		margin:auto;
+		border:3px solid red;
+	}
+	.w-top{
+		width:50px;
+		height:50px;
+	}
+	.w-top1{
+		/*position:static;*/
+		position:relative;
+		margin-top:0px;
+		left:0px;
+		top:0px;
+		background-color:skyblue;
+	}
+	.w-top2{
+		background-color:red;
+	}
+	span{
+		
+	}
+ </style>
+ </head>
+ <!--
+			float和inline-block的区别
+				1.inline-block会解析换行为一个空格
+				2.inline-block对齐方式受到基线影响，浮动是正常对齐
+ -->
+
+ <!--
+			什么是定位？
+				定位的基本思想，就是允许定位的元素相对于它本身的正常位置或者相对于父元素（参考物），或者是更高一级的长辈级元素（参考物），甚至是浏览器本身body（参考物），来发生一个位置的改变
+
+			定位属性：position
+			定位属性改变的关键词：像素值-px
+				left / top / bottom / right =>相对于参考物在某一方向上发生的位置移动
+				left:0px;
+				top:0px;
+				bottom:0px;
+				right:0px;
+
+			 1.默认定位->static
+				【注意：浏览器默认的正常定位，也就是从上到下，从左到右的排列，关键词不起作用（我们使用外边距）】
+
+			 2.相对定位->relative
+				【注意：相对于这个元素的自身在网页上的正常位置发生改变】
+				left/top/bottom/right 这几个关键词可以使用
+
+				特点：
+				 1）它不会脱离文档流
+				 2）元素本身的特性不会发生变化，内联元素还是内联元素
+				 3）如果不设置位置的偏移量，就不会发生位置的改变（关键词值为0或者不写）
+				 4）就算该元素发生位置的改变，但是它仍然占据着原来的位置
+
+			 3.绝对定位->absolute
+				相对于直系长辈级并且这些元素必须是定位元素（一个就好，找最接近的那一个定位元素就好，如果直系长辈元素不是定位元素，就参考body）
+				【注意：参考元素只能是自己的长辈级】
+				left/top/bottom/right这几个关键词都可以用
+
+				特点：
+				 1）完全脱离文档流
+				 2）行内元素支持宽高
+				 3）没有上级定位则相对于body
+				 4）一定配合直系长辈，第一个定位元素位置来发生位置的改变
+				 5）margin:auto;
+				注意居中：
+					1）{
+						left:50%;
+						margin-left:-元素的宽的一般； ->是负的
+					}
+					2）{
+						left:0;
+						right:0;
+						margin:auto;
+					}
+ -->
+
+ <!--
+			固定定位：fixed
+				就是相对于浏览器窗口定位，不随内容一起跑
+
+				最小宽度：min-width:; =>大于等于
+				最大宽度：max-width:; =>小于等于
+ -->
+ <body>
+	<div class="wrap">warp
+		<div class="w-top w-top1">biu1~</div>
+		<div class="w-top2">biu2~
+			<div class="t-content1"></div>
+		</div>
+		<span>biu3~</span>
+	</div>
+ </body>
+</html>

@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="MoLin">
+  <meta name="Keywords" content="学习">
+  <meta name="Description" content="字体样式+文本样式+特殊字符">
+  <title>字体样式|文本样式|特殊字符</title>
+ <style type="text/css">
+/*字体样式text*/
+	/*body,p,h2{margin:0;padding:0;}
+	body{
+		font-family:"宋体";
+	}
+	p{
+		color:red;	
+	}
+	.list1{
+		font-family:"宋体",FangSong;
+
+		color:red;
+
+		font-style:oblique;
+	}
+	.list2{
+		font-family:"微软雅黑";
+
+		/*font-size:18px;
+		/*font-size:2em;
+		/*font-size:200%;
+		/*font-size:2rem
+
+		/*font-weight:bold;
+		/*font-weight:bolder;
+		/*font-weight:lighter;
+
+		font-style:italic;
+	}
+	.h2{
+		/*font-weight:lighter;
+	}
+	.h3{
+		font-variant:small-caps;
+	}
+	.div{
+		width:80px;
+		height:100px;
+		border:1px solid red;
+		line-height:100px;
+	}*/
+
+/*文本样式text*/
+	body,p,h2{margin:0;padding:0;}
+	p{
+		/*text-transform:uppercase;*/
+		/*text-transform:capitalize;*/
+		text-transform:lowercase;
+	}
+	div{
+		width:100px;
+		height:100px;
+		margin:auto;
+		border:1px solid red;
+		text-align:center;
+		text-indent:10px;
+		text-decoration:underline;
+	}
+	a{
+		text-decoration:none;
+	}
+ </style>
+ </head>
+ <!--
+			字体样式：
+				1.字体颜色：color:;
+
+				2.字体样式：font-family:;
+					【注意：字体类型可以为中文，但是必须加引号，有特殊符号的(如空格)也要加引号】
+					【写多个字体类型的时候，用逗号隔开】
+
+				3.字体大小：font-size:;
+				 1）像素px
+					【chrome中字体最小16px】
+				 2）em
+					【比例是基于HTML来算的，em就是从最小字体开始翻倍，默认1em=16px】
+				 3）百分数
+					【比例是基于HTML来算的，默认100%=16px】
+				 4）rem
+					【比例是基于HTML来算的，默认1rem=16px】【用于移动端开发】
+
+				4.字体加粗font-weight:;
+				 1）normal
+					【正常的】
+				 2）bold
+					【粗体】
+				 3）bolder
+					【更粗，但并没有达到更粗的效果，一般没用】
+				 4）lighter
+					【更细，只针对带有加粗样式的标签，如strong/h1/h2...】
+				 5）100,200,300,400,500,600,700,800,900
+					【注意：font-weight:600;=font-weight:bold;】
+					【注意：100-500字体没有变化(normal)；600-900字体也没有变化(bold)】
+				 6）inherit
+					【继承父级字体粗细】
+
+				5.字体样式font-style:;
+				 1）italic
+					【字体斜体：字体的结构发生变化的倾斜】
+				 2）oblique
+					【字体倾斜：字体直接的倾斜】
+
+				6.小写字母大写：font-variant:small-caps;
+
+				7.*行高：line-height:;
+					【字体上下居中：属性值等于这个盒子的高度】
+					【多用行高，少用内边距】
+
+				8.字体复合样式写法：
+					font:
+ -->
+
+ <!--
+			文本样式
+				1.文本的大小写：text-transform:;
+				 1）uppercase【字母大写】
+				 2）capitalize【首字母大写】
+				 3）lowercase【字母小写】
+
+				2.文本对齐方式：text-align:;
+				 1）left【左对齐】
+				 2）right【右对齐】
+				 3）center【居中对齐】
+				 4）justify【两端对齐】
+				
+				3.文本缩进：text-indent:;
+
+				4.文本修饰：text-decoration:;
+				 1）none【去除下划线】
+				 2）underline【添加下划线】
+				 3）line-through【中划线】
+				 4）overline【上划线】
+				
+				5.文字间间距：letter-spacing:;
+
+				6.词间距：word-spacing:;
+					【要在词与词之间加上空格才能生效】
+
+				7.文本间不换行：white-space:nowwrap;
+
+				8.超出隐藏：overflow:hidden;
+					
+				【省略号的效果：
+					white-space:nowwrap;
+					overflow:hidden;
+					text-overflow:ellipsis;
+					三者缺一不可】
+ -->
+
+ <!--
+			特殊字符
+				&nbsp;【空格】
+				&gt;&lt;【>】
+				&quot;【<】
+				&yen;【元】
+				&copy;【版权】
+ -->
+ <body>
+<!--字体样式text-->
+	<!--
+	<p class="list1">MoLin</p>
+	<p class="list2">MoLin</p>
+	<h2>MoLin</h2>
+	<strong>MoLin</strong>
+	<h3>molin</h3>
+	<div>MoLin</div>
+	-->
+
+<!--文本样式text-->
+	<!--
+	<p>MoLin</p>
+	<div>MoLin</div>
+	<a href="#"></a>
+	-->
+
+<!--特殊字符text-->
+	&nbsp;&gt;&lt;&quot;&copy;;&yen
+ </body>
+</html>

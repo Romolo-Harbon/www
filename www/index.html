@@ -1,0 +1,470 @@
+﻿<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="glen">
+  <meta name="Keywords" content="index orangerworker">
+  <meta name="Description" content="orangeworker的首页">
+  <title>Orangeworker</title>
+  <link rel="stylesheet" href="css/iconfont.css"></link>
+  <link rel="shortcut icon" type="image/x-icon" href="favicon/www.ico.la_favicon_32X32.ico" media="screen"/></link>
+  <style type="text/css">
+	body,h2,h3,ul,li,p{margin:0;padding:0;}
+	html,body{height:100px;}
+	ul{list-style-type:none;}
+	a{
+		text-decoration:none;
+		color:#000;
+	}
+	body{
+		background:url(images/bg1.jpg) repeat-x,
+				   url() 0 80px/cover;  
+	}
+	h2{
+		font-family:KaiTi,"Microsoft YaHei";
+		font-size:40px;
+		line-height:80px;
+		text-align:center;
+	}
+	.subject{
+		width:1200px;
+		height:1000px;
+		margin:auto;
+	}
+	/*导航区域*/
+	.nav{
+		float:left;
+		cursor:pointer;
+	}
+	.nav > span{
+		font-size:25px;
+		font-weight:bold;
+	}
+	.nav a{color:#fff;}
+	.nav > ul{
+		margin-top:10px;
+	}
+	.nav ul li{
+		width:130px;
+		height:26px;
+		margin-bottom:1px;
+		margin-left:30px;
+		background-color:rgba(141,122,101,1);
+		color:#fff;
+		font-size:14px;
+		line-height:26px;
+		text-align:center;
+		border-radius:4px;
+		box-shadow:inset 1px 2px 20px 5px #000;
+	}
+	.nav ul .first-nav{
+		position:relative;
+		transition:1s;
+	}
+	.nav > ul > .first-nav:before{
+		content:"「";
+		position:absolute;
+		left:13px;
+		transition:.6s;
+	}
+	.nav > ul > .first-nav:after{
+		content:"」";
+		position:absolute;
+		top:0;
+		right:13px;
+		transition:.6s;
+	}
+	ul.sec-nav{
+		height:0px;
+		overflow:hidden;
+		perspective:300px;
+		transition:1s;
+	}
+	ul.sec-nav a{
+		font-size:14px;
+		color:#ff8040;
+	}
+	ul.sec-nav li{
+		margin-top:1px;
+		margin-left:0;
+		transform:rotateY(90deg);
+	}
+	.nav .first-nav:hover:before{transform:translateX(-15px)}
+	.nav .first-nav:hover:after{transform:translateX(15px)}
+	.nav > ul >.first-nav:hover{margin-bottom:82px;}
+	.nav > ul >.friend-link:hover{margin-bottom:27px;}/* friend-link的长度*/
+	.nav > ul >.daidai:hover{margin-bottom:215px;}	/* dai-dai的nav长度 */
+	.nav > ul >.molin:hover{margin-bottom:565px;}	/* mo-lin的nav长度 */
+	.nav > ul >.mumu:hover{margin-bottom:82px;}		/* mu-mu的nav长度 */
+	.nav > ul >.first-nav:hover ul{height:80px;}
+	.nav > ul >.friend-link:hover ul{height:26px;}
+	.nav > ul >.daidai:hover ul{height:214px;}
+	.nav > ul >.molin:hover ul{height:564px;}
+	.nav > ul >.mumu:hover ul{height:80px;}
+	.nav > ul >.first-nav:hover ul li{transform:none;}
+	.nav > ul >li:hover ul li:nth-child(1){transition-delay:0ms;}
+	.nav > ul >li:hover ul li:nth-child(2){transition-delay:100ms;}
+	.nav > ul >li:hover ul li:nth-child(3){transition-delay:200ms;}
+	.nav > ul >li:hover ul li:nth-child(4){transition-delay:300ms;}
+	ul.sec-nav li:nth-child(4){transition-delay:300ms;}
+	ul.sec-nav li:nth-child(3){transition-delay:200ms;}
+	ul.sec-nav li:nth-child(2){transition-delay:100ms;}
+	ul.sec-nav li:nth-child(1){transition-delay:0ms;}
+	/*显示区域*/
+	.content{
+		position:relative;
+		float:left;
+		margin-left:40px;
+		margin-top:40px;
+	}
+	iframe{
+		width:950px;
+		height:650px;
+		border:2px solid #333;
+		border-radius:10px;
+	}
+	div.msg{
+		text-align:right;
+		line-height:50px;
+	}
+	div.msg a{
+		padding:0 10px;
+		font-size:16px;
+	}
+	.move img{width:130px;}
+	.move{
+		position:absolute;
+		top:0;
+		right:0;
+		animation:move 20s linear 1;
+	}
+	
+	@keyframes move{
+		0%   {transform:translate(0,0);}
+		100%  {transform:translate(0,250px);}
+	}
+	/*足部区域*/
+  </style>
+ </head>
+ <body>
+	<h2>Orangeworker</h2>
+	<div class="subject">
+		<div class="nav">
+			<span class="iconfont icon-kejian-zimulu"> INDEX </span>
+			<ul>
+				<li class="first-nav">网站简介
+					<ul class="sec-nav">
+						<li>
+							<a href="" rel="" title=""></a>
+						</li>
+						<li>
+							<a href="" rel="" title=""></a>
+						</li>
+						<li>
+							<a href="" rel="" title=""></a>
+						</li>
+					</ul>
+				</li>
+				<li class="first-nav friend-link">友情链接
+					<ul class="sec-nav">
+						<li>
+							<a href="http://yanyuefan.xyz/" rel="" title="">代码实验室</a>
+						</li>
+					</ul>
+				</li>
+				<li class="first-nav">资源链接
+					<ul class="sec-nav">
+						<li>
+							<a href="http://www.haibao.com/" rel="" title="">时尚海报网</a>
+						</li>
+						<li>
+							<a href="https://www.easyicon.net/" rel="" title="">图标下载</a>
+						</li>
+						<li>
+							<a href="http://iconfont.cn/" rel="" title="">矢量图标下载</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+				</li>
+				<li class="first-nav">@Dai Dai
+					<ul class="sec-nav">
+						<li>
+							<a href="" rel="" title=""></a>
+						</li>
+						<li>
+							<a href="" rel="" title=""></a>
+						</li>
+						<li>
+							<a href="" rel="" title=""></a>
+						</li>
+					</ul>
+				</li>
+				<li class="first-nav daidai">演示专用
+					<ul class="sec-nav">
+						<li>
+							<a href="text\dai-dai\level\level.html" rel="" title="" target="show">Level</a>
+						</li>
+						<li>
+							<a href="text\dai-dai\audio\audio.html" rel="" title="" target="show">Audio</a>
+						</li>
+						<li>
+							<a href="text\dai-dai\Blue Flax (Linum lewisii)\Blue Flax (Linum lewisii).html" rel="" title="" target="show">Blue Flax</a>
+						</li>
+						<li>
+							<a href="text\dai-dai\video\video.html" rel="" title="" target="show">Video</a>
+						</li>
+						<li>
+							<a href="text\dai-dai\video\video-dom.html" rel="" title="" target="show">Video-Dom</a>
+						</li>
+						<li>
+							<a href="text\dai-dai\draganddrop\draganddrop.html" rel="" title="" target="show">Draganddrop</a>
+						</li>
+						<li>
+							<a href="text\dai-dai\draganddrop\draganddrop2.html" rel="" title="" target="show">Draganddrop2</a>
+						</li>
+						<li>
+							<a href="text\dai-dai\c\c.html" rel="" title="" target="show">C</a>
+						</li>
+					</ul>
+				</li>
+				<li class="first-nav daidai" >单独弹窗
+					<ul class="sec-nav">
+						<li>
+							<a href="text\dai-dai\level\level.html" rel="" title="Level" target="_blank">Level</a>
+						</li>
+						<li>
+							<a href="text\dai-dai\audio\audio.html" rel="" title="Audio" target="_blank">Audio</a>
+						</li>
+						<li>
+							<a href="text\dai-dai\Blue Flax (Linum lewisii)\Blue Flax (Linum lewisii).html" rel="" title="Blue Flax" target="_blank">Blue Flax</a>
+						</li>
+						<li>
+							<a href="text\dai-dai\video\video.html" rel="" title="Video" target="_blank">Video</a>
+						</li>
+						<li>
+							<a href="text\dai-dai\video\video-dom.html" rel="" title="Video-Dom" target="_blank">Video-Dom</a>
+						</li>
+						<li>
+							<a href="text\dai-dai\draganddrop\draganddrop.html" rel="" title="Draganddrop" target="_blank">Draganddrop</a>
+						</li>
+						<li>
+							<a href="text\dai-dai\draganddrop\draganddrop2.html" rel="" title="Draganddrop2" target="_blank">Draganddrop2</a>
+						</li>
+						<li>
+							<a href="text\dai-dai\c\c.html" rel="" title="C" target="_blank">C</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+				</li>
+				<li class="first-nav">@Mo Lin
+					<ul class="sec-nav">
+						<li>
+							<a href="" rel="" title=""></a>
+						</li>
+						<li>
+							<a href="" rel="" title=""></a>
+						</li>
+						<li>
+							<a href="" rel="" title=""></a>
+						</li>
+					</ul>
+				</li>
+				<li class="first-nav molin">演示专用
+					<ul class="sec-nav">
+						<li>
+							<a href="text\mo-lin\molin-01.html" rel="" title="" target="show">Robot</a>
+						</li>
+						<li>
+							<a href="text\mo-lin\molin-02.html" rel="" title="" target="show">标签实验</a>
+						</li>
+						<li>
+							<a href="text\mo-lin\molin-03.html" rel="" title="" target="show">导航实验I</a>
+						</li>
+						<li>
+							<a href="text\mo-lin\molin-04.html" rel="" title="" target="show">导航实验II</a>
+						</li>
+						<li>
+							<a href="text\mo-lin\molin-05.html" rel="" title="" target="show">背景样式</a>
+						</li>
+						<li>
+							<a href="text\mo-lin\molin-06.html" rel="" title="" target="show">文字样式</a>
+						</li>
+						<li>
+							<a href="text\mo-lin\molin-07.html" rel="" title="" target="show">选择器</a>
+						</li>
+						<li>
+							<a href="text\mo-lin\molin-08.html" rel="" title="" target="show">优先级</a>
+						</li>
+						<li>
+							<a href="text\mo-lin\molin-09.html" rel="" title="" target="show">关于浮动</a>
+						</li>
+						<li>
+							<a href="text\mo-lin\molin-10.html" rel="" title="" target="show">关于定位</a>
+						</li>
+						<li>
+							<a href="text\mo-lin\molin-11.html" rel="" title="" target="show">关于层级</a>
+						</li>
+						<li>
+							<a href="text\mo-lin\molin-12.html" rel="" title="" target="show">垂直居中</a>
+						</li>
+						<li>
+							<a href="text\mo-lin\molin-13-1.html" rel="" title="" target="show">关于伪类</a>
+						</li>
+						<li>
+							<a href="text\mo-lin\molin-13-2.html" rel="" title="" target="show">表单form</a>
+						</li>
+						<li>
+							<a href="text\mo-lin\molin-13-3.html" rel="" title="" target="show">文本域</a>
+						</li>
+						<li>
+							<a href="text\mo-lin\molin-14.html" rel="" title="" target="show">轮播插件</a>
+						</li>
+						<li>
+							<a href="text\mo-lin\molin-15-1.html" rel="" title="" target="show">关于表格I</a>
+						</li>
+						<li>
+							<a href="text\mo-lin\molin-15-2.html" rel="" title="" target="show">关于表格II</a>
+						</li>
+						<li>
+							<a href="text\mo-lin\molin-16-1.html" rel="" title="" target="show">frameset</a>
+						</li>
+						<li>
+							<a href="text\mo-lin\molin-16-2.html" rel="" title="" target="show">内联框架</a>
+						</li>
+						<li>
+							<a href="text\mo-lin\molin-16-3.html" rel="" title="" target="show">属性继承</a>
+						</li>
+					</ul>
+				</li>
+				<li class="first-nav molin">单独弹窗
+					<ul class="sec-nav">
+						<li>
+							<a href="text\mo-lin\molin-01.html" rel="" title="" target="_blank">Robot</a>
+						</li>
+						<li>
+							<a href="text\mo-lin\molin-02.html" rel="" title="" target="_blank">标签实验</a>
+						</li>
+						<li>
+							<a href="text\mo-lin\molin-03.html" rel="" title="" target="_blank">导航实验I</a>
+						</li>
+						<li>
+							<a href="text\mo-lin\molin-04.html" rel="" title="" target="_blank">导航实验II</a>
+						</li>
+						<li>
+							<a href="text\mo-lin\molin-05.html" rel="" title="" target="_blank">背景样式</a>
+						</li>
+						<li>
+							<a href="text\mo-lin\molin-06.html" rel="" title="" target="_blank">文字样式</a>
+						</li>
+						<li>
+							<a href="text\mo-lin\molin-07.html" rel="" title="" target="_blank">选择器</a>
+						</li>
+						<li>
+							<a href="text\mo-lin\molin-08.html" rel="" title="" target="_blank">优先级</a>
+						</li>
+						<li>
+							<a href="text\mo-lin\molin-09.html" rel="" title="" target="_blank">关于浮动</a>
+						</li>
+						<li>
+							<a href="text\mo-lin\molin-10.html" rel="" title="" target="_blank">关于定位</a>
+						</li>
+						<li>
+							<a href="text\mo-lin\molin-11.html" rel="" title="" target="_blank">关于层级</a>
+						</li>
+						<li>
+							<a href="text\mo-lin\molin-12.html" rel="" title="" target="_blank">垂直居中</a>
+						</li>
+						<li>
+							<a href="text\mo-lin\molin-13-1.html" rel="" title="" target="_blank">关于伪类</a>
+						</li>
+						<li>
+							<a href="text\mo-lin\molin-13-2.html" rel="" title="" target="_blank">表单form</a>
+						</li>
+						<li>
+							<a href="text\mo-lin\molin-13-3.html" rel="" title="" target="_blank">文本域</a>
+						</li>
+						<li>
+							<a href="text\mo-lin\molin-14.html" rel="" title="" target="_blank">轮播插件</a>
+						</li>
+						<li>
+							<a href="text\mo-lin\molin-15-1.html" rel="" title="" target="_blank">关于表格I</a>
+						</li>
+						<li>
+							<a href="text\mo-lin\molin-15-2.html" rel="" title="" target="_blank">关于表格II</a>
+						</li>
+						<li>
+							<a href="text\mo-lin\molin-16-1.html" rel="" title="" target="_blank">frameset</a>
+						</li>
+						<li>
+							<a href="text\mo-lin\molin-16-2.html" rel="" title="" target="_blank">内联框架</a>
+						</li>
+						<li>
+							<a href="text\mo-lin\molin-16-3.html" rel="" title="" target="_blank">属性继承</a>
+						</li>
+					</ul>
+				</li>
+				<li class="miss-nav">
+				</li>
+				<li class="first-nav">编程语言
+					<ul class="sec-nav">
+						<li>
+							<a href="text\dai-dai\c\c.html" rel="" title="" target="show">C</a>
+						</li>
+						<li>
+							<a href="" rel="" title=""></a>
+						</li>
+						<li>
+							<a href="" rel="" title=""></a>
+						</li>
+					</ul>
+				</li>
+				<li class="first-nav mumu">演示专用
+					<ul class="sec-nav">
+						<li>
+							<a href="" rel="" title=""></a>
+						</li>
+						<li>
+							<a href="" rel="" title=""></a>
+						</li>
+						<li>
+							<a href="" rel="" title=""></a>
+						</li>
+					</ul>
+				</li>
+				<li class="first-nav mumu">单独弹窗
+					<ul class="sec-nav">
+						<li>
+							<a href="" rel="" title=""></a>
+						</li>
+						<li>
+							<a href="" rel="" title=""></a>
+						</li>
+						<li>
+							<a href="" rel="" title=""></a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="content">
+			<div class="move"><img src="images/1.gif" alt=""></div>
+			<iframe src="" frameborder="0" name="show"></iframe>
+			<div class="msg">
+				<a href="#" class="iconfont icon-guanyuwomen"> 关于我</a>
+				<a href="#" class="iconfont icon-email"> 联系我</a>
+				<a href="#" class="iconfont icon-shouji"> 电话</a>
+				<a href="#" class="iconfont icon-huaqiangxincheng-icon_huabanfuben"> 微信</a>
+			</div>
+		</div>
+	</div>
+	<div class="foot">
+	<small>
+	<script type="text/javascript" src="http://ip.chinaz.com/getip.aspx"></script>
+	<p><small>&copy;Orangeworker.</small></p>
+	</footer>
+	<div>
+ </body>
+</html>

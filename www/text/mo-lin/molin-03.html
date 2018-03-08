@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="MoLin">
+  <meta name="Keywords" content="学习">
+  <meta name="Description" content="02笔记">
+  <title>紫荆花导航</title>
+ <head>
+  <!--
+		图片的引入
+			图片的格式：JPG PNG GIF
+			
+			1.相对路径（就是相当于当前文档位置出发）
+				【我们做网页通常使用相对路径】
+				1）当前目录 ./（可以省略）
+				2）上一级目录 ../（不可以省略）
+				3）上上级目录 ../../（不能是..../）
+				【每上一级都要加上一个../】
+				4）下一级目录 先找到相关目录再照图片
+			2.绝对路径（）
+				1）本地绝对路径（从盘符出发）
+				2）网路绝对路径（从域名出发）
+			【注意：路径不要使用中文名!!】
+			【注意：/和\都可以用】
+ -->
+
+ <!--
+		内部样式：
+			写在<style></style>样式表标签里面
+				【格式规范：先空格一下，再按一下Tab】
+			第一步：
+				1）喊->找到我们要操作的标签（div标签）
+				2）说->给他添加样式（样式放在花括号里）
+				3）内容->样式表{}
+					样式表：->【属性:属性值;（多个）】
+					a）width宽
+					b）height高
+					c）background-color背景颜色
+						【要按要求加上-color,不要随便写复合属性】
+ -->
+
+ <!--
+		盒子模型:
+			盒子模型大小：
+				=content（内容）+padding（内边距）+border（边框）+margin（外边距）
+
+			盒子模型内容：直接给宽高
+				【注意：html方向顺序是上、右、下、左】
+			 1)内边距：padding（【属性值用px（像素）】【挨着内容一圈往外撑开】【相当于包着快递内容的垫子，会撑大盒子】）
+				A）单内边距
+				 a）上内边距：padding-top 
+				 b）右内边距：padding-right
+				 c）下内边距：padding-bottom
+				 d）左内边距：padding-left
+
+				B）多内边距
+				 a）padding:0px 0px 0px 0px;【四个值：上->右->下->左】
+				 b）padding:0px 0px 0px;【三个值：上->左右->下】
+				 c）padding:0px 0px;【两个值：上下->左右】
+				 d）padding:0px;【一个值：上右下左】
+
+			 2)边框：border（【挨着内边距一圈】【相当于快递盒子】【三个属性值：width(粗细) style(样式) color(颜色)】
+				A）单边框
+				 a）上边框：border-top 
+							-> border-top-width/border-top-style/border-top-color
+				 b）右边框：border-right 
+							-> border-right-width/border-right-style/border-right-color
+				 c）下边框：border-bottom 
+							-> border-bottom-width/border-bottom-style/border-bottom-color
+				 d）左边框：border-left
+							 -> border-left-width/border-left-style/border-left-color
+	
+				B）三个属性值
+				【注意：只写style，默认黑色边框，不写style则不生成边框/尽量按顺序写属性值】
+				 a）width：边框的粗细，数值像素
+				 b）style：样式【solid(实线)/dashed(虚线)/dotted(点虚线)/double(双线)】
+				 c）color：颜色【写法：英文单词/#十六进制】
+
+			 3)外边距：margin（【紧贴着边框一圈】【相当于两个快递盒子之间要有的距离，要有行内对照才会显示，但实际存在】【外边距无颜色】）
+				A）单内边距
+				 a）margin-top
+				 b）margin-right
+				 c）margin-bottom
+				 d）margin-left
+
+				B）多内边距
+				 a）margin:0px 0px 0px 0px;【四个值：上->右->下->左】
+				 b）margin:0px 0px 0px;【三个值：上->左右->下】
+				 c）margin:0px 0px;【两个值：上下->左右】
+				 d）margin:0px;【一个值：上右下左】
+
+				C）特殊的
+				 a）居中：margin:auto;（上下左右居中）/margin:50px atuo;（上下50px，左右居中）/
+ -->
+	<style>
+		body{
+			margin:0;
+			padding:0;
+			background-color:rgb(77,152,93);
+		}
+		div.box01{
+			width:600px;
+			height:550px;
+			background-color:#fff;
+			margin:50px auto;
+		}
+		img{
+			margin:50px 50px 25px 50px;
+		}
+		p{
+			text-align:center;
+			margin:25px;
+		}
+		span{
+			color:red;
+		}
+		div.box02{
+			width:0;
+			height:0;
+			margin:100px auto;
+			border-color:red black green blue;
+			border-style:solid;
+			border-width:50px;
+		}
+		div.box03{
+			width:0;
+			height:0;
+			margin:100px auto;
+			border-color:red transparent transparent;
+			border-style:solid;
+			border-width:50px;
+		}
+		hr{
+			display:block;
+			height:0px;
+			border-width:5px;
+			border-style:solid;
+			border-color:skyblue #630 rgb(204,203,211);
+		}
+	</style>
+<html>
+ <body>
+	<div class="box01">
+		<img src="images/bauhinia.jpg" alt="紫荆花" width="500" height="331">
+		<p><strong>click here→</strong>
+		<a target="_blank" href="https://image.baidu.com/search/index?tn=baiduimage&ct=201326592&lm=-1&cl=2&ie=gbk&word=%D7%CF%BE%A3%BB%A8&fr=ala&ala=1&alatpl=adress&pos=0&hs=2&xthttps=111111" title="picture">picture</a>
+		<strong>←see bauhinia flower </strong>
+		<span><em>picture</em></span></p>
+		<p><strong>click here→</strong>
+		<a target="_blank" href="https://baike.baidu.com/item/%E7%BA%A2%E8%8A%B1%E7%BE%8A%E8%B9%84%E7%94%B2/3459839?fr=aladdin&fromid=1656&fromtitle=%E7%B4%AB%E8%8D%86%E8%8A%B1" title="data">data</a>
+		<strong>←see bauhinia flower </strong>
+		<span><em>data</em></span></p>
+	</div>
+	<hr>
+	<div class="box02"></div>
+	<hr>
+	<div class="box03"></div>
+ </body>
+</html>

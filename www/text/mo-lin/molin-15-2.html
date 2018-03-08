@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="MoLin">
+  <meta name="Keywords" content="学习">
+  <meta name="Description" content="表格table">
+  <title>表格table</title>
+<style type="text/css">
+	body{margin:0;padding:0;}
+	/*table{
+		width:300px;
+		border:1px solid black;
+	}*/
+	table{
+		width:500px;
+		border-color:red;
+		border-spacing:5px 10px;
+	}
+	th{
+		border:1px solid black;
+	}
+	td{
+		border:1px solid black;
+	}
+</style>
+ </head>
+ <!--
+			表格table3
+				头部：<thead></thead> 
+				表格主体部分：<tbody></tbody>
+				表格尾部：<tfoot></tfoot>
+				【注意：为了简化表格，以上几个可以省略】
+
+				表格一行：<tr></tr>
+					头部单元格：<th></th>
+					主部单元格：<td></td>
+
+			表格样式：
+				<table width="" height="" border=""></table>
+				cellspacing 单元格之间的间距（上下左右）
+				 【注意：智力的border直接给宽度，如果要设置颜色值等样式，需在样式表里面实现】
+
+			单元格和边框之间，还有每一个单元格彼此之间的间距border-spacing:x y;
+			 【x代表水平方向，y代表竖直方向】
+
+			塌陷单元格：border-collapse:collapse;会忽略单元格的距离
+
+			表格样式初始化：
+				table{border-collapse:collapse;}
+				
+			
+			table默认样式：
+				1.单元格默认平分table的宽度（待考虑）
+				2.th里面的内容默认加粗并且上下居中
+				3.td里面的内容默认上下居中，左对齐
+				4.table决定整个表格的宽度
+				5.table里面的单元格宽度会转换成百分比
+				6.表格同一列/行会继承最大值
+				7.th,td没有margin，单元格里面可以包括（文本，图片，列表，表单，表格...）
+
+				 （td里面的文字支持文本对齐方式）
+
+			table表格合并：
+				横向合并：colspan
+				<td colspan="数值"></td>
+			
+ -->
+ <body>
+	<table width="300px" height="300px" border="5px">
+			<tr>
+				<th>姓名</th>
+				<th>年龄</th>
+				<th>是否结婚</th>
+			</tr>
+			<tr>
+				<td>MoLin</td>
+				<td>20</td>
+				<td>未婚</td>
+			</tr>
+			<tr>
+				<td>JJ</td>
+				<td>18</td>
+				<td>未婚</td>
+			</tr>
+	</table>
+ </body>
+</html>
