@@ -1,0 +1,74 @@
+ <!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="MoLin">
+  <meta name="Keywords" content="学习">
+  <meta name="Description" content="课后作业">
+  <title>结构性伪类选择器</title>
+ <style type="text/css">
+ body,p{margin:0;padding:0;}
+p {
+     width:100px;
+     height:35px;
+     border:1px solid #000;
+     margin-top:5px;
+ }
+ span{
+     display:block;
+     width:100px;
+     height:35px;
+     border:1px solid red;
+     margin-top:5px;
+ }
+ p:nth-child(3){
+     background-color:blue;
+ }
+ p:nth-of-type(4){
+     background-color:pink;
+ }
+ span:nth-of-type(2){
+     background-color:green;
+ }
+ p:nth-child(2n){
+     margin-left:20px;
+ }
+  p:nth-child(2n-1){
+      border-top:5px solid red;
+  }
+  span:empty{
+      
+  }
+ </style>
+ <!--
+			结构性伪类选择器
+				E:nth-child(n)表示E元素父级的所有子元素集合中的第n个子节点，该节点必须和E元素相同
+				
+				E:nth-last-child(n)表示E元素父级的所有子元素集合中从后面往前数第n个子节点，该节点必须和E元素相同
+				
+				E:nth-of-type(n)表示E元素父级的所有子元素集合中与该元素相同的元素的第n个节点
+				
+				E:nth-last-of-type(n)表示相同E元素父级的所有子元素集合中与该元素相同的元素，从后往前面数的第n个节点
+				
+				E:nth-child(2n)偶数选择=>E:nth-child(even){}
+				E:nth-child(2n-1)奇数选择=>E:nth-child(odd){}
+				  
+				E:empty{}表示E元素中没有子节点，里面不能有任何东西，包括空格回车
+ -->
+ </head>
+
+ <body>
+      <div>
+          <p>p1</p>
+          <span>span1</span>
+          <p>p2</p>
+          <p>p3</p>
+          <span>span2</span>
+          <p>p4</p>
+          <p>p5</p>
+          <p></p>
+          <span> </span>
+      </div>
+ </body>
+</html>

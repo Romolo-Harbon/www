@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="MoLin">
+  <meta name="Keywords" content="学习">
+  <meta name="Description" content="课后作业">
+  <title>CSS3选择器</title>
+ <style type="text/css">
+ body{margin:0;padding:0;}
+ [type]{
+     border:2px solid red;
+ }
+ [type=password]{
+     height:50px;
+ }
+ [type~=text]{
+     background-color:blue;
+ }
+ [type|=text]{
+     margin-left:30px;
+ }
+ </style>
+ <!--
+			通配符选择器
+			id 选择器
+			class类名
+			标签选择器
+			属性选择器(alt指代属性)
+                [att]匹配所有具有att属性标签
+                [att=val]匹配所有具有att属性等于val
+                [att~=val]匹配所有att属性包含val或等于val的标签
+                [att|=val]匹配所有att属性以val-开头或者等于val的标签
+			伪类选择器
+ -->
+ </head>
+
+ <body>
+      <input type="text" /><br>
+      <input type="password" /><br>
+      <input type="" />
+ </body>
+</html>

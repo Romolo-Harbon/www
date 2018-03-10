@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="MoLin">
+  <meta name="Keywords" content="学习">
+  <meta name="Description" content="课后作业">
+  <title>新的属性选择器</title>
+ <style type="text/css">
+ body{margin:0;padding:0;}
+ [type*=text]{
+     border:2px solid red;
+ }
+ [type^=text]{
+     margin-left:20px;
+ }
+ [type$=text]{
+     background-color:blue;
+ }
+ </style>
+ <!--
+			新的属性选择器
+				[att*=val]匹配所有att属性包含val(这个val可以在一个属性值里面包含，比如val1)
+				[att^=val]匹配所有att属性val开头(这个val可以在任何一个属性值的前面，比如val1)
+				[type$=val]匹配所有att属性以val结尾
+ -->
+ </head>
+
+ <body>
+       <input type="" /><br>
+       <input type="text"><br>
+      <input type="text password" /><br>
+      <input type="password text" /><br>
+        <input type="text1" /><br>
+      <input type="1text" /><br>
+      <input type="text-1" />
+ </body>
+</html> 

@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="MoLin">
+  <meta name="Keywords" content="学习">
+  <meta name="Description" content="课后作业">
+  <title>伪类选择器</title>
+ <style type="text/css">
+ body{margin:0;padding:0;}
+ li{
+     width:200px;
+     height:200px;
+     margin-top:10px;
+ }
+ 
+ li:target{
+     font-size:30px;
+     color:red;
+ }
+ input:disabled{
+     width:50px;
+     height:50px;
+ }
+ input:enabled{
+     width:25px;
+     height:25px;
+ }
+ input:checked{
+     height:50px;
+     width:50px;
+ }
+ p{
+     width:400px;
+     height:200px;
+     border:2px solid red;
+ }
+ p:first-line{
+     font-size:25px;
+ }
+ p:first-letter{
+     color:blue;
+     font-weight:bold;
+ }
+ p::selection{
+     color:red;
+ }
+ li:not(#item){
+     border:5px solid red;
+ }
+ p ~ div{
+     width:50px;
+     height:50px;
+     background-color:pink;
+ }
+ </style>
+ </head>
+
+ <body>
+     <p>pppppppppp</p>
+     <input type="checkbox" name="radio" disabled/>男<br>
+     <input type="checkbox" name="radio" />女
+      <div>
+          <a href="#item">走你</a>
+      </div>
+      <ul>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li id="item">就是我</li>
+          <li></li>
+      </ul>
+      <div></div>
+ </body>
+</html>
